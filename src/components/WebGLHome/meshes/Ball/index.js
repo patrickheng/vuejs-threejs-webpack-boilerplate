@@ -27,9 +27,6 @@ class Ball extends THREE.Mesh {
 
     this.position.range = [ -300, 300 ];
 
-    this.animProgress = 0;
-
-    this.defaultRotationSpeed = 0.005;
     this.rotationSpeed = 0.005;
 
     this.addGUI();

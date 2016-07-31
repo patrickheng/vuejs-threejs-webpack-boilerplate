@@ -1,4 +1,3 @@
-import { randomInt } from 'utils/maths';
 /**
 * PostProcessing class
 */
@@ -27,12 +26,9 @@ class PostProcessing {
     if( this.usePostProcessing ) {
       this.passes       = this.configuration.passes.filter( pass => pass.active );
       this.constructors = this.passes.map( pass => pass.constructor() );
-      // this.startGlitch();
     }
 
-
     // this.debug();
-
   }
 
   debug() {
@@ -52,27 +48,6 @@ class PostProcessing {
     };
 
     document.addEventListener( 'keyup', onKeyUp, false );
-  }
-
-  startGlitch() {
-
-    window.clearTimeout( this.glitchTimeout );
-
-    this.glitchTimeout = setTimeout(()=>{
-
-      this.constructors[0].params.delta.x = randomInt( -1000, 1000 );
-      this.constructors[0].params.delta.y = randomInt( -1000, 1000 );
-
-      setTimeout(()=>{
-
-        this.constructors[0].params.delta.x = 0;
-        this.constructors[0].params.delta.y = 0;
-        this.startGlitch();
-
-      }, randomInt(0, 50));
-
-    }, randomInt(800, 6000));
-
   }
 
   /**

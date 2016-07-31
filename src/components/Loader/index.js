@@ -41,6 +41,7 @@ export default Vue.extend({
   },
 
   methods: {
+
     onResourceProgress( p ) {
       this.progress = Math.ceil( p * 100 );
 
