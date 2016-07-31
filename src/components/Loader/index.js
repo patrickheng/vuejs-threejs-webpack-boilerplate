@@ -51,15 +51,14 @@ export default Vue.extend({
         TweenMax.to(this, 0.1, { tweenProgress: this.progress, onUpdate: () => {
           this.progress = Math.ceil( this.tweenProgress );
         }});
-
       }
       else if ( this.progress <= 100 ) {
 
         TweenMax.to(this, 0.4, { tweenProgress: this.progress, onUpdate: () => {
           this.progress = Math.ceil( this.tweenProgress );
         }});
-
       } else {
+
         this.progress = 0;
         this.tweenProgress = 0;
       }

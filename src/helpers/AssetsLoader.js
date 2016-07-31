@@ -1,4 +1,4 @@
-import AWDLoader from 'common/utils/webgl/AWDLoader';
+import AWDLoader from 'utils/webgl/AWDLoader';
 import SoundManager from 'helpers/SoundManager';
 import VideoManager from 'helpers/VideoManager';
 import files from 'config/resources';

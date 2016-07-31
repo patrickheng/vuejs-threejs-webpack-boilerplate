@@ -8,7 +8,6 @@ import debounce from 'lodash.debounce';
 
 import 'augmented-compile-shader';
 import 'utils/webgl/AugmentedConsole';
-
 import 'gsap';
 
 import {
@@ -48,9 +47,7 @@ export default Vue.extend({
   },
 
   ready() {
-
-    // window.console.warn = () => {};
-
+    this.creditsLog();
     this.addDeviceClass();
     this.addBrowserClass();
   },
@@ -58,8 +55,18 @@ export default Vue.extend({
   methods: {
 
     bind() {
-
       this.handleWindowResize = debounce(this.broadcastWindowSize, 200);
+    },
+
+    creditsLog() {
+       /*eslint-disable */
+       console.log('%c', 'background: #ffffff; font-size: 11px; color: #f0f0f0');
+
+       console.log('%c > Portfolio: http://hengpatrick.fr', 'background: #2c3e50; padding:5px; font-size: 11px; color: #ffffff');
+       console.log('%c > Lab: http://lab.hengpatrick.fr', 'background: #2c3e50; padding:5px; font-size: 11px; color: #ffffff');
+       console.log('%c > Twitter: http://twitter.com/Pat_Hg', 'background: #2c3e50; padding:5px; font-size: 11px; color: #ffffff');
+       console.log('%c', 'background: #ffffff; font-size: 11px; color: #f0f0f0');
+       /*eslint-enable */
     },
 
     addBrowserClass() {
@@ -79,7 +86,6 @@ export default Vue.extend({
     },
 
     broadcastWindowSize() {
-
       this.emitter.emit(WINDOW_RESIZE, {
         width: window.innerWidth,
         height: window.innerHeight

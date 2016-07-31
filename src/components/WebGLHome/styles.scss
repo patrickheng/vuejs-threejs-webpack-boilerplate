@@ -4,6 +4,7 @@
 .webgl-home {
   position: relative;
   z-index: 0;
+  
   &--is-intersecting {
     cursor: pointer;
   }

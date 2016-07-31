@@ -41,11 +41,8 @@ export default Vue.extend({
   },
 
   created() {
-
     this.scene = new Scene( homeConfig, this.resources );
     this.sceneDomEl = this.scene.renderer.domElement;
-    this.aboutTimeout = null;
-    this.currentIndex = 0;
   },
 
   ready() {
@@ -64,7 +61,6 @@ export default Vue.extend({
     },
 
     onRaycastToggle( toggle ) {
-
       this.isIntersecting = toggle;
     }
   }

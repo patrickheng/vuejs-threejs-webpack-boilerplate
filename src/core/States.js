@@ -1,10 +1,6 @@
-import Emitter from 'helpers/Emitter';
 import MobileDetect from 'mobile-detect';
 import browser from 'detect-browser';
 
-import {
-  PROJECT_CHANGE
-} from 'config/messages';
 class States {
 
   constructor() {
@@ -17,16 +13,6 @@ class States {
     this.isDesktop = ( this.deviceType === 'desktop' );
     this.isTablet  = ( this.deviceType  === 'tablet' );
     this.isMobile  = ( this.deviceType  === 'mobile' );
-
-    this.addListeners();
-    this.currentIndex = 0;
-  }
-
-  addListeners() {
-
-    this.onProjectChange = ::this.onProjectChange;
-
-    Emitter.on( PROJECT_CHANGE, this.onProjectChange );
   }
 
   getDeviceType() {
@@ -41,11 +27,6 @@ class States {
 
   isIE() {
     return ( this.userAgent.indexOf( 'MSIE ' ) > 0 || this.userAgent.indexOf( 'Trident/' ) > 0 || this.userAgent.indexOf( 'Edge/' ) > 0 );
-  }
-
-
-  onProjectChange( index ) {
-    this.currentIndex = index;
   }
 }
 

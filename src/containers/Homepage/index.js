@@ -3,7 +3,6 @@
 import './styles.scss';
 
 import EventManagerMixin from 'mixins/EventManagerMixin';
-import States from 'core/States';
 import LoaderComponent from 'components/Loader';
 import WebGLHomeComponent from 'components/WebGLHome';
 import AssetsLoader from 'helpers/AssetsLoader';
@@ -63,10 +62,7 @@ export default Vue.extend({
   data() {
 
     return {
-      aboutIsHidden: true,
       assetsIsLoaded: false,
-      isRaycasting: false,
-      showScrollIndicator: States.scrollIndicator,
       resources: {}
     };
   },
@@ -83,7 +79,6 @@ export default Vue.extend({
        this.emitter.emit( RESOURCES_READY, this.resources );
 
        this.assetsIsLoaded = true;
-
      } );
   },
 

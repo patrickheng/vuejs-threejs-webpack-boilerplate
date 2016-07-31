@@ -3,7 +3,7 @@
   <loader v-show="!assetsIsLoaded"></loader>
 
   <div
-    :class="{ 'page__container': true, 'page__container--about-is-open': !aboutIsHidden }"
+    class="page__container"
     v-if="assetsIsLoaded">
 
     <webgl-home :resources="resources"></webgl-home>

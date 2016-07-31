@@ -27,20 +27,13 @@ export default Vue.extend({
 
   ready() {
     this.generateTimelineMax();
-    this.enterTl.play();
   },
 
   methods: {
 
-    generateTimelineMax() {
+    generateTimelineMax() {},
 
-      this.enterTl = new TimelineMax({ paused: true });
-
-    },
-
-    onRouterRouteChange( ) {
-
-    }
+    onRouterRouteChange() {}
   }
 
 });

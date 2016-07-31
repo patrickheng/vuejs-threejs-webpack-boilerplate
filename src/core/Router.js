@@ -21,10 +21,6 @@ class Router extends VueRouter {
       transitionOnLoad: false
     });
 
-    this.path = '/';
-    this.firstRoute = true;
-    this.routeTimeout = null;
-
     this.map({
 
       '*': {
@@ -32,8 +28,6 @@ class Router extends VueRouter {
         component: HomePageComponent
       }
     });
-
-    // this.beforeEach( ({ to, next }) => {});
 
     this.afterEach( ({ to }) => {
       Emitter.emit( ROUTER_ROUTE_CHANGE, to.name );
