@@ -1,0 +1,16 @@
+@import '~stylesheets/common/variables';
+@import '~stylesheets/common/mixins';
+
+.logo {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  font-size: 1.3rem;
+  color: $color-grey-medium;
+  transition: color 0.3s ease-out;
+  cursor: pointer;
+  
+  .desktop-device &:hover {
+    color: $color-black;
+  }
+}

@@ -1,0 +1,15 @@
+@import '~stylesheets/common/variables';
+@import '~stylesheets/common/mixins';
+
+.page--home {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

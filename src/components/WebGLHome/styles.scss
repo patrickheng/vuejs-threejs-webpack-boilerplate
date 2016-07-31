@@ -1,0 +1,10 @@
+@import '~stylesheets/common/variables';
+@import '~stylesheets/common/mixins';
+
+.webgl-home {
+  position: relative;
+  z-index: 0;
+  &--is-intersecting {
+    cursor: pointer;
+  }
+}

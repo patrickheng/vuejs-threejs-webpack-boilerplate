@@ -1,0 +1,48 @@
+@import '~stylesheets/common/variables';
+@import '~stylesheets/common/mixins';
+
+.loader {
+  position: absolute;
+  background: $color-white;
+  transition: opacity 1s ease-out;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+
+  &-leave {
+    opacity: 0;
+  }
+}
+
+.loader__text {
+  position: absolute;
+  right: 7rem;
+  bottom: 7rem;
+  text-align: right;
+  font-size: 15rem;
+  transition: transform 0.3s ease-out;
+  color: $color-grey-light;
+}
+
+.loader__bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  background: rgba( $color-black, 0.1 );
+  transform: scaleX(0);
+}
+
+@include breakpoint( $bp-tablet-medium ) {
+
+}
+
+@include breakpoint( $bp-phone-large ) {
+
+  .loader__text {
+    right: 3rem;
+    bottom: 3rem;
+    font-size: 10rem;
+  }
+}
