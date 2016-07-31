@@ -1,11 +1,10 @@
 # Vue.js + Three.js + webpack boilerplate
 
-My Vue.js + Three.js boilerplate.
+Vue.js + Three.js boilerplate created with [@FabienMotte](https://github.com/FabienMotte).
 
 It's based on my [vue.js boilerplate](https://github.com/patrickheng/vuejs-webpack-boilerplate).
 
 I added to it :
-- New file organisation
 - Abstract classes for THREE Camera / Renderer / Scene
 - My WebGL helpers and utils
 - File organisation with external config files for scene, meshes, camera and lights
@@ -45,5 +44,3 @@ Feel free to contact me for any questions or suggestion :)
 Hope you like it XOXO <3
 
 - [Twitter](http://twitter.fr/pat_hg)
-- [Portfolio](http://hengpatrick.fr)
-- [Lab](http://lab.hengpatrick.fr)
