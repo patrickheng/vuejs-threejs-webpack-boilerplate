@@ -1,6 +1,6 @@
 import { BlendMode } from '@superguigui/wagner';
 import MultiPassBloomPass from '@superguigui/wagner/src/passes/bloom/MultiPassBloomPass';
-import TiltShiftPass from '@superguigui/wagner/src/passes/tiltShift/tiltShiftPass';
+import TiltShiftPass from '@superguigui/wagner/src/passes/tiltshift/tiltshiftPass';
 import VignettePass from '@superguigui/wagner/src/passes/vignette/VignettePass';
 import NoisePass from '@superguigui/wagner/src/passes/noise/noise';
 import FXAAPass from '@superguigui/wagner/src/passes/fxaa/FXAAPass';
