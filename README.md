@@ -1,4 +1,9 @@
-# Vue.js + Three.js + webpack boilerplate
+# [ OUTDATED ] Vue.js + Three.js + webpack boilerplate
+
+## Warning
+This boilerplate is no longer updated. 
+
+## Description
 
 Vue.js + Three.js boilerplate created with [@FabienMotte](https://github.com/FabienMotte).
 
